@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Aula03_Pokedex.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aula03_Pokedex"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Padding="0">
+
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="images/pokemon_background.png"/>
+        </Grid.Background>
+        <Grid HorizontalAlignment="Left" Height="412" Margin="10,118,0,0" VerticalAlignment="Top" Width="340" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="167*"/>
+                <RowDefinition Height="245*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="100" Margin="10,20,0,0" VerticalAlignment="Top" Width="320" Source="images/pokemon_logo.png">
+            </Image>
+            <TextBlock x:Name="txtBlLogin" HorizontalAlignment="Left" Height="22" Margin="20,10,0,0" TextWrapping="Wrap" Text="Entre com o login" VerticalAlignment="Top" Width="300" Grid.Row="1"/>
+            <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="0" Margin="10,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Grid.Row="1"/>
+            <TextBlock x:Name="txtBlSenha" HorizontalAlignment="Left" Height="22" Margin="20,89,0,0" TextWrapping="Wrap" Text="Entre com a senha" VerticalAlignment="Top" Width="300" Grid.Row="1"/>
+            <PasswordBox x:Name="pwdSenha" HorizontalAlignment="Left" Height="5" Margin="10,121,0,0" VerticalAlignment="Top" Width="300" Grid.Row="1"/>
+            <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Left" Height="34" Margin="10,168,0,0" VerticalAlignment="Top" Width="300" Click="btnOk_Click" Grid.Row="1"/>
+        </Grid>
+
+    </Grid>
+</Page>
