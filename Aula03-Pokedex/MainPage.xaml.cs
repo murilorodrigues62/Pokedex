@@ -24,12 +24,13 @@ namespace Aula03_Pokedex
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();            
         }
 
         private async void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            if(txtLogin.Text=="admin" && pwdSenha.Password == "123")
+            Jogador jogador = JogadorDB.GetJogador(txtLogin.Text, pwdSenha.Password);
+            if (jogador != null)
             {
                 Frame.Navigate(typeof(PokemonList));
             }
@@ -38,6 +39,11 @@ namespace Aula03_Pokedex
                 var dialog = new Windows.UI.Popups.MessageDialog("Usuário/Senha Inválidos!!!");
                 await dialog.ShowAsync();
             }
+        }
+
+        private void btnNovoUsua_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Cadastro));
         }
     }
 }

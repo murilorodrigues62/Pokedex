@@ -29,7 +29,8 @@ namespace Aula03_Pokedex
         public App()
         {
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            this.Suspending += OnSuspending;            
+            JogadorDB.LoadDatabase();
         }
 
         /// <summary>
